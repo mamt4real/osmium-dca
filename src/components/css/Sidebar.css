@@ -1,0 +1,33 @@
+.sidebar,
+.sidebar.MuiDrawer-root .MuiPaper-root {
+  min-width: 320px;
+  min-height: calc(100vh - 98px);
+  /* border-radius: 24px; */
+  background-color: var(--bg-light);
+  padding: 3rem 1.5rem;
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .sidebar__item {
+  padding: 12px 10px;
+  text-decoration: none;
+  font-size: large;
+  margin: 12px 0;
+  color: var(--bg-white);
+  display: flex;
+  gap: 10px;
+  width: 95%;
+  align-items: center;
+  transition: 0.3s;
+  border-radius: 12px;
+  border: solid 1px var(--bg-white);
+  text-transform: uppercase;
+}
+.sidebar .sidebar__item:hover,
+.sidebar__item.active {
+  border: none;
+  background-color: var(--bg-main);
+  border-left: solid 5px var(--bg-white);
+}

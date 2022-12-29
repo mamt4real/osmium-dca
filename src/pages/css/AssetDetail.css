@@ -1,0 +1,15 @@
+.asset_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  font-size: 22pt;
+  background-color: var(--bg-white);
+  border: 8px solid var(--bg-light);
+  border-radius: 50%;
+  color: var(--bg-main);
+  font-weight: 800;
+  object-fit: contain;
+  /* margin-right: 5px; */
+}

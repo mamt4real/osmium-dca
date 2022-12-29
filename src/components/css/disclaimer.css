@@ -1,0 +1,18 @@
+.disclaimer {
+  width: 300px;
+  /* height: 250px; */
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  font-size: 12pt;
+  /* font-style: italic; */
+  color: white;
+  /* font-weight: 700; */
+}
+.disclaimer p {
+  margin-top: 0;
+}
+.disclaimer .action {
+  display: flex;
+  justify-content: center;
+}

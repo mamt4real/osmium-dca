@@ -1,0 +1,80 @@
+.app {
+  background-color: var(--bg-main);
+  min-height: 100vh;
+  width: 100%;
+  color: white;
+  scroll-snap-type: y mandatory;
+  position: relative;
+}
+
+.app > div:nth-child(even) {
+  background-color: var(--bg-white);
+  color: var(--bg-main);
+}
+
+.app .subtitle {
+  font-size: min(max(2rem, 5vw), 2rem);
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.dialogWrapper.MuiDialog-root .MuiPaper-root {
+  position: absolute !important;
+  top: 8px;
+}
+
+.dialogWrapper .MuiDialogTitle-root {
+  background-color: var(--bg-light);
+}
+
+.dialogWrapper .MuiIconButton-root,
+.dialogWrapper .MuiIconButton-root:hover {
+  background-color: var(--bg-white);
+}
+
+.dialogWrapper .dialog__close {
+  color: red;
+  fill: red;
+  stroke: red;
+}
+.empty {
+  margin-top: 160px;
+  align-items: center;
+}
+.empty img {
+  width: 214px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.empty h3 {
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+.empty p {
+  text-align: center;
+  max-width: 224px;
+  font-weight: 300;
+  font-size: 12px;
+}
+svg.addbtnicon {
+  background-color: white;
+  border-radius: 4px;
+}
+
+/* Reset Paper color for MuiAccordion */
+.MuiPaper-root.MuiAccordion-root,
+.MuiAccordionSummary-root,
+.MuiAccordionSummary-content,
+.MuiAccordionDetails-root {
+  background-color: transparent !important;
+  color: inherit;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root.Mui-expanded {
+  min-height: 40px !important;
+}
+

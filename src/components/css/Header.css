@@ -1,0 +1,16 @@
+.header.MuiAppBar-root {
+  background-color: var(--bg-light);
+}
+.header .brand {
+  align-items: center;
+  gap: 10px;
+}
+
+.brand .logo {
+  object-fit: contain;
+  width: 65px;
+  height: 65px;
+  margin: 5px;
+  border-radius: 50%;
+  border: solid 2px white;
+}

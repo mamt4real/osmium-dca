@@ -1,0 +1,73 @@
+.loginform {
+  border: solid 2px var(--bg-white);
+  background-color: var(--bg-light);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  /* min-height: 600px; */
+  height: fit-content;
+  padding: 0.6rem;
+  color: var(--bg-white);
+  align-items: center;
+  border-radius: 24px;
+  margin: 10px auto;
+}
+
+.loginform.transactionform {
+  padding: 1.5rem 12px 12px 12px;
+  max-width: none;
+  width: 300px;
+}
+.loginform .loginform__logo {
+  width: 120px;
+  height: 120px;
+  font-size: larger;
+}
+.loginform .loginform__icons {
+  margin-right: 8px;
+  color: var(--bg-white);
+  /* fill: var(--bg-white); */
+}
+.loginform .MuiTextField-root,
+.loginform .MuiSelect-root {
+  width: 90%;
+  color: var(--bg-white);
+  background-color: var(--bg-main);
+  border-radius: 12px;
+  margin-bottom: 18px;
+}
+.loginform .MuiTextField-root label,
+.loginform .MuiTextField-root input,
+.loginform .MuiSelect-root select {
+  border-color: var(--bg-white) !important;
+  color: var(--bg-white);
+}
+
+.loginform__links {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding: 0 10px;
+}
+
+.loginform__links .linkItem {
+  color: var(--bg-white);
+  cursor: pointer;
+  text-transform: capitalize;
+  font-size: small;
+}
+.loginform__links .linkItem:hover {
+  transform: translateY(-3px);
+  color: orange;
+}
+
+@media screen and (min-width: 900px) {
+  .loginform {
+    /* max-height: 450px; */
+  }
+  .loginform.transactionform {
+    width: 335px;
+  }
+}

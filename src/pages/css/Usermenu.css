@@ -1,0 +1,19 @@
+.usermenu__body {
+  width: 100%;
+  display: flex;
+  padding: 0.5rem;
+}
+
+.usermenu__page {
+  flex: 1;
+  width: 100%;
+  position: relative;
+}
+.usermenu__body .userpage {
+  flex: 1;
+}
+
+/* .userpage.assetdetail .MuiButton-root svg {
+  fill: var(--bg-white);
+  color: var(--bg-white);
+} */
