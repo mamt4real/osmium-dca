@@ -13,6 +13,7 @@ import { cleanDate, toCurrency } from '../utils/converters'
 function Dashboard() {
   const { aggregates, coins } = useStateValue()[0]
   const [stats, setStats] = useState({})
+  const yearState = useState(new Date().getFullYear())
 
   useEffect(() => {
     const pieData = []
@@ -47,9 +48,7 @@ function Dashboard() {
     const monthlyChart = monthlyGrowth(
       aggregates
         .reduce((sub, tr) => [...sub, ...tr.transactions], [])
-        .filter(
-          (t) => cleanDate(t.date).getFullYear() === new Date().getFullYear()
-        )
+        .filter((t) => cleanDate(t.date).getFullYear() === yearState[0])
     )
 
     setStats({
@@ -59,7 +58,7 @@ function Dashboard() {
       assetsMarketValue,
       percentage: isNaN(percentage) ? 0.0 : percentage,
     })
-  }, [aggregates, coins])
+  }, [aggregates, coins, yearState])
 
   return (
     <div className='userpage dashboard'>
@@ -133,7 +132,7 @@ function Dashboard() {
             backgroundColor: 'var(--bg-light)',
           }}
         >
-          <Box style={{ height: '520px' }}>
+          <Box style={{ height: '520px', marginBottom: 0 }}>
             <ChartPie data={stats.pieData} />
           </Box>
         </Grid>
@@ -147,9 +146,9 @@ function Dashboard() {
             backgroundColor: 'var(--bg-light)',
           }}
         >
-          <Box style={{ height: '520px', width: '100%' }}>
-            <Typography align='center' variant='h4'>
-              Portfolio Growth
+          <Box style={{ height: '520px', marginBottom: 0, width: '100%' }}>
+            <Typography align='center' variant='h6'>
+              Portfolio Activity for {yearState[0]}
             </Typography>
             <ChartLine
               data={stats.monthlyChart}

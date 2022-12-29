@@ -25,7 +25,7 @@ export default class ChartPie extends PureComponent {
     const { data = sampleData, dataKey = 'value' } = this.props
     return (
       <div className='chartcontainer'>
-        <Typography align='center' variant='h4'>
+        <Typography align='center' variant='h6'>
           Asset Distribution
         </Typography>
         <PieChart width={300} height={400} onMouseEnter={this.onPieEnter}>

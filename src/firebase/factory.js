@@ -52,10 +52,13 @@ export const monthlyGrowth = (transactions) => {
   const temp = []
   for (const month of sortedMonths) {
     const val = monthlyGroups.hasOwnProperty(month) ? monthlyGroups[month] : []
+    const buy = getSum(val, (t) => Number(t.amount), 'Buy')
+    const sell = getSum(val, (t) => Number(t.amount), 'Sell')
+
     temp.push({
       name: month,
-      buy: getSum(val, (t) => Number(t.amount), 'Buy'),
-      sell: getSum(val, (t) => Number(t.amount), 'Sell'),
+      buy,
+      sell,
     })
   }
   return temp
